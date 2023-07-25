@@ -16,17 +16,18 @@ public class User {
     private int id;
 
     @NotEmpty(message = "Name cannot be empty")
-    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
+    @Size(min = 2, max = 20, message = "Name must be between 2 and 20 characters")
     @Column(name = "name")
     private String name;
 
     @NotEmpty(message = "Surname cannot be empty")
-    @Size(min = 2, max = 50, message = "Surname must be between 2 and 50 characters")
+    @Size(min = 2, max = 20, message = "Surname must be between 2 and 20 characters")
     @Column(name = "surname")
     private String surName;
 
     @NotNull(message = "Age cannot be null")
-    @Min(value = 18, message = "Age must be at least 18")
+    @Size(min = 1,max = 110, message = "Age must be between 1 and 110 years")
+    @Digits(integer = 10, fraction = 0, message = "Age must be an integer")
     @Column(name = "age")
     private int age;
 

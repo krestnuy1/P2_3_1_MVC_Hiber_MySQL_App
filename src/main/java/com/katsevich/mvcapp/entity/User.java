@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 
 
 @Entity
-@Table(name = "users")
+@Table(name = "Allusers")
 public class User {
 
     @Id
@@ -26,7 +26,6 @@ public class User {
     private String surName;
 
     @NotNull(message = "Age cannot be null")
-    @Size(min = 1,max = 110, message = "Age must be between 1 and 110 years")
     @Digits(integer = 10, fraction = 0, message = "Age must be an integer")
     @Column(name = "age")
     private int age;
